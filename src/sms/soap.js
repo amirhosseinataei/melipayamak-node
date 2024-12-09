@@ -38,8 +38,6 @@ class Soap extends BaseSoap {
     }
 
     send2(_to, from, text, isflash = false, udh = "") {
-        //_to is array
-        var to = [{'string': _to}];
         return this.execute(this.sendUrl, "SendSms", {
             ...this.data,
             to,
